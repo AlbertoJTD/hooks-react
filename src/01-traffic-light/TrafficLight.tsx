@@ -7,10 +7,13 @@ const colors = {
   default: 'bg-gray-500'
 }
 
-export function TrafficLight() {
-  const [light, setLight] = useState('red');
+export type TrafficLightColor = 'red' | 'yellow' | 'green';
+// type TrafficLightColor = keyof typeof colors;
 
-  const handleChangeColor = (color: string) => {
+export function TrafficLight() {
+  const [light, setLight] = useState<TrafficLightColor>('red');
+
+  const handleChangeColor = (color: TrafficLightColor) => {
     setLight(color);
   }
 
