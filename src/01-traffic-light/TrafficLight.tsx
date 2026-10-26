@@ -7,7 +7,7 @@ const colors = {
   default: 'bg-gray-500'
 }
 
-export type TrafficLightColor = 'red' | 'yellow' | 'green';
+type TrafficLightColor = 'red' | 'yellow' | 'green';
 // type TrafficLightColor = keyof typeof colors;
 
 export function TrafficLight() {
